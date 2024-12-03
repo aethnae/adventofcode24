@@ -15,3 +15,5 @@ for i, x in enumerate(row1):
 result = sum([a * b for a, b in zip(row1, mult)])
 
 print(result)
+
+# Part B solved. Correct result is 21024792

@@ -9,8 +9,6 @@ with open('Inputs/02.txt', 'r') as fin:
     for line in fin:
         numbers.append([int(i) for i in line.split()])
 
-print(numbers)
-
 def is_safe(nums: list[int]):
     if nums == sorted(nums) or nums == sorted(nums, reverse=True):
         if min([abs(y - x) for (x,y) in pairwise(nums)]) > 0 and max([abs(y - x) for (x,y) in pairwise(nums)]) < 4:
@@ -38,6 +36,6 @@ for unsafe_reports in unsafe_reports:
         can_become_safe_counter += 1
 
 print(f"There are {can_become_safe_counter} reports that can become safe")
-print(f"There are {counter + can_become_safe_counter} that are now safe")
+print(f"There are {counter + can_become_safe_counter} reports that are now safe")
 
 # Part B solved here. Answer is 373

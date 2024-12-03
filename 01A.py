@@ -6,3 +6,5 @@ row2 = sorted([int(y) for y in [x.split()[1] for x in open('Inputs/01.txt').read
 distances = [abs(x) for x in list(map(operator.sub, row1, row2))]
 
 print(sum(distances))
+
+# Part A solved. Correct result is 1879048
