@@ -5,9 +5,11 @@ unsafe_reports = []
 counter = 0
 can_become_safe_counter = 0
 
-with open('Inputs/02A.txt', 'r') as fin:
+with open('Inputs/02.txt', 'r') as fin:
     for line in fin:
         numbers.append([int(i) for i in line.split()])
+
+print(numbers)
 
 def is_safe(nums: list[int]):
     if nums == sorted(nums) or nums == sorted(nums, reverse=True):
